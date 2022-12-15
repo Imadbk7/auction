@@ -1,0 +1,150 @@
+.navbar {
+  background: #f4a460;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background: #de6854;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: darkred;
+}
+
+/*Dropdownmenu stuff*/
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: white;
+  background: #de6854;
+  padding: 14px 16px;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: darkred;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #bc552b;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.loginmenus{
+  position: absolute;
+  right: 0%;
+}
+
+.starters{
+  position: absolute;
+  left: 0%;
+}
+
+.header1{
+  background-color: sandybrown;
+  margin: 0%;
+
+}
+
+.img-valign {
+  vertical-align: middle;
+  margin-bottom: 0.75em;
+}
+
+.text1 {
+  font-size: 50px;
+  position: absolute;
+}
+
+mat-form-field {
+  margin-right: 12px;
+}
+
+h1 {
+  color: red;
+  font-weight: bold;
+}
+
+.float-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 140px;
+  width: 200px;
+}
+
+.float-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 140px;
+  width: 200px;
+}
+
+.header-title {
+  overflow: hidden;
+  width: auto;
+}
+
+.header {
+  height: 200px;
+  background-color: cornsilk;
+  width: 100%;
+}
+
+.header-title h1 {
+  margin: 20px 0 10px;
+  padding: 0 0 20px;
+  border-bottom: 3px solid white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.subtitle-right {
+  position: absolute;
+  top: 90px;
+  right: 210px;
+  text-align: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.subtitle-left {
+  position: absolute;
+  top: 90px;
+  left: 210px;
+  font-size: 15px;
+  font-weight: bold;
+}
+

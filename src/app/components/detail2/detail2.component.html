@@ -1,0 +1,73 @@
+<div *ngIf="selectedOffer != null; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <td>
+    <table>
+      <thead>
+      <th>Selected offer details: (id= {{ selectedOffer.id }})</th>
+      <tr>
+        <th>Title:</th>
+        <input class="textColum" [ngModel]="selectedOffer.title" type="text">
+      </tr>
+      <tr>
+        <th>Description:</th>
+        <input [ngModel]="selectedOffer.description" type="text">
+      </tr>
+      <tr>
+        <th>Status:</th>
+        <select>
+          <option>{{this.selectedOffer.status}}</option>
+          <option *ngFor="let status of keys(status)" >
+            {{status}}
+          </option>
+        </select>
+      </tr>
+      <tr>
+        <th>Highest bid:</th>
+        <input [(ngModel)]="selectedOffer.valueHighestBid" type="text">
+      </tr>
+      </thead>
+      <div (click)="onOfferSelected(selectedOffer.id)" class="btn btn-success">Delete</div>
+    </table>
+  </td>
+</ng-template>
+<ng-template #elseBlock>
+  <th>Geen event geselecteerd</th>
+</ng-template>
+
+
+
+
+
+
+
+
+<!--  <h3 id="selectedId">Selected offer details: (id: {{this.offerService.selectedOffer.id}})</h3>-->
+<!--  <div class="row">-->
+<!--    <p>title</p>-->
+<!--    <input [ngModel]="this.offerService.selectedOffer.title"  id="titleField" type="text">-->
+<!--  </div>-->
+
+<!--  <div class="row">-->
+<!--    <p>Description</p>-->
+<!--    <input [ngModel]="this.offerService.selectedOffer.description" id="descriptionField"  type="text">-->
+
+<!--  </div>  <div class="row">-->
+<!--  <p>Status</p>-->
+<!--  <input [ngModel]="this.offerService.selectedOffer.status" id="StatusField"  type="text">-->
+
+<!--</div>  <div class="row">-->
+<!--  <p>Highest bid</p>-->
+<!--  <input [ngModel]="this.offerService.selectedOffer .valueHighestBid" id="bidField"  type="text">-->
+<!--</div>-->
+
+<!--  <div (click)="deleteOne(this.offerService.selectedOffer.id)"  class="btn btn-success">Delete</div>-->
+<!--  <div (click)="clear()" class="btn btn-success">clear</div>-->
+<!--  <div  (click)="reset()" class="btn btn-success">reset</div>-->
+<!--  <div (click)="cancel()" class="btn btn-success">cancel</div>-->
+<!--  <div  (click)="edit()" class="btn btn-success">save</div>-->
+
+
+
+
+
+

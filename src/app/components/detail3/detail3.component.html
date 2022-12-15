@@ -1,0 +1,42 @@
+<div *ngIf="offersService.selectedOffer.id != null; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <td>
+        <table>
+            <thead>
+            <th id="theId">Selected offer details: (id= {{ this.offersService.selectedOffer.id }})</th>
+            <tr>
+                <th>Title:</th>
+                <input id="titleInput" [ngModel]="this.offersService.selectedOffer.title" type="text">
+            </tr>
+            <tr>
+                <th>Description:</th>
+                <input id="descriptionInput" [ngModel]="this.offersService.selectedOffer.description"type="text">
+            </tr>
+            <tr>
+                <th>Status:</th>
+                <select id="statusField" [ngModel]="offersService.selectedOffer.status">
+                  <option >{{this.offersService.selectedOffer.status}}</option>
+                  <option value="defaultval">Choose a option</option>
+                  <option *ngFor="let status of keys(status)" >
+                    {{status}}
+                  </option>
+                </select>
+            </tr>
+            <tr>
+                <th>Highest bid:</th>
+                <input id="highestBidInput" [ngModel]="this.offersService.selectedOffer.valueHighestBid" type="text">
+            </tr>
+            </thead>
+            <tr>
+                <button (click)="deleteOffer()" id="deleteButton">Delete</button>
+                <button (click)="edit()" id="saveButton">Save</button>
+                <button (click)="clear()" id="clearButton">Clear</button>
+                <button (click)="reset()" id="resetButton">Reset</button>
+                <button (click)="cancel()" id="cancelButton">Cancel</button>
+            </tr>
+        </table>
+    </td>
+</ng-template>
+<ng-template #elseBlock>
+    <th>Geen event geselecteerd</th>
+</ng-template>

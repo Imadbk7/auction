@@ -1,0 +1,75 @@
+<h1>Lists of all offers:</h1>
+<table id="someTable">
+    <thead>
+    <th>Title</th>
+    </thead>
+
+    <tbody>
+<!--    <tr *ngFor="let Offer of loadOfferTitles()" [ngClass]="{'selectedOffer': Offer == selectedOfferId}">-->
+    <tr *ngFor="let Offer of loadOfferTitles()">
+        <td (click)="onClickOffer(Offer)">{{Offer.title}}</td>
+    </tr>
+    </tbody>
+    <div class="btn btn-success" (click)="this.offersService.addOne()">Add</div>
+</table>
+
+<app-detail3 [(editedOfferId)]="selectedOfferId"></app-detail3>
+
+
+<!--<div class="  container">-->
+
+<!--  <h1>Overview of all offers</h1>-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-3">-->
+<!--      <table>-->
+<!--        <tr>-->
+<!--          <th style="background-color: sandybrown">Offer title</th>-->
+<!--        </tr>-->
+
+<!--        <tr *ngFor="let offers of this.offerService.findAll();">-->
+<!--          <td (click)="this.onselect(offers); this.isSelected()">{{offers.title}}</td>-->
+<!--        </tr>-->
+<!--      </table>-->
+<!--    </div>-->
+
+
+<!--    <div  *ngIf="this.hasBeenSelected" class="col-5 kolom">-->
+<!--      <h3 id="selectedId">Selected offer details: (id: {{this.selectedOffer.id}})</h3>-->
+<!--      <div class="row">-->
+<!--        <p>title</p>-->
+<!--        <input [ngModel]="selectedOffer.title" id="titleField" type="text">-->
+<!--      </div>-->
+
+<!--      <div class="row">-->
+<!--        <p>Description</p>-->
+<!--        <input [ngModel]="selectedOffer.description" id="descriptionField"  type="text">-->
+
+<!--      </div>  <div class="row">-->
+<!--      <p>Status</p>-->
+<!--      <input [ngModel]="selectedOffer.status" id="StatusField"  type="text">-->
+
+<!--    </div>  <div class="row">-->
+<!--      <p>Highest bid</p>-->
+<!--      <input [ngModel]="selectedOffer.valueHighestBid" id="bidField"  type="text">-->
+<!--    </div>-->
+
+<!--      <div  (click)="this.deleteOne(this.selectedOffer.id)" class="btn btn-success">Delete</div>-->
+<!--      <div (click)="this.clear()" class="btn btn-success">clear</div>-->
+<!--      <div (click)="this.reset()" class="btn btn-success">reset</div>-->
+<!--      <div (click)="this.cancel()" class="btn btn-success">cancel</div>-->
+<!--      <div (click)="this.edit()" class="btn btn-success">save</div>-->
+
+<!--    </div>-->
+
+
+
+
+<!--  </div>-->
+<!--  <div (click)="addNewOffer()" class="btn btn-success">add fake offer</div>-->
+
+
+
+
+
+
+<!--</div>-->

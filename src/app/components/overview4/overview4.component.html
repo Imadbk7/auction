@@ -1,0 +1,14 @@
+<h1>Lists of all offers:</h1>
+<table id="someTable">
+    <thead>
+    <th>Title</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let offer of loadOfferTitles()">
+<!--        <a [routerLink]="['/overview4', offer.id]"></a>-->
+        <td (click)="onClickOffer(offer)">{{offer.title}}</td>
+    </tr>
+    </tbody>
+    <div class="btn btn-success" (click)="this.offersService.addOne()">Add</div>
+</table>
+<router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+<div class="container">
+  <h3>List of offers</h3>
+
+  <table>
+    <tr>
+      <th style="background-color: sandybrown">Id</th>
+      <th style="background-color: sandybrown">Title</th>
+      <th style="background-color: sandybrown">Selling date</th>
+      <th style="background-color: sandybrown">Status</th>
+      <th style="background-color: sandybrown">Value Highest bid</th>
+    </tr>
+
+    <tr *ngFor="let Offer of offers">
+      <td>{{Offer.id}}</td>
+      <td>{{Offer.title}}</td>
+      <td>{{Offer.sellingdate | date: 'EEE, d MMM y, HH:mm'}}</td>
+      <td>{{Offer.status}}</td>
+      <td>{{Offer.valueHighestBid}}</td>
+    </tr>
+  </table>
+  <div (click)="ngOnInit()" class="btn btn-success">Add</div>
+</div>

@@ -1,0 +1,52 @@
+table, th, td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+th {
+  background-color: burlywood;
+}
+
+table {
+  border-style: solid;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+h1 {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+#someTable {
+  display: inline-table;
+}
+
+#someButton {
+  background-color: orange;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  display: inline-block;
+  vertical-align: bottom;
+
+  position: absolute;
+  left: 74px;
+
+}
+
+tr:hover {
+  background-color: grey;
+}
+
+tr:active {
+  background-color: aqua;
+}

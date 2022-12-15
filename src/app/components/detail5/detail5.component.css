@@ -1,0 +1,54 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+  background-color: sandybrown;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+
+}
+
+tr:hover{
+  background-color: grey;
+}
+
+tr:active{
+  background-color: aqua;
+}
+
+
+
+
+.delete{
+  position: absolute;
+  right: 0%;
+}
+
+
+.kolom{
+  background-color: sandybrown;
+  border-style: solid;
+  height: 40%;
+}
+
+p{
+  border-style: solid;
+  width: 30%;
+  margin: 0%;
+}
+
+input{
+  height: 30%;
+}

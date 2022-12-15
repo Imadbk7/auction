@@ -1,0 +1,67 @@
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: blue;
+  color: blue;
+  font-size: 30px;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  flex: 0 0 500px;
+}
+
+.main {
+  background-color: white;
+  flex: 35%;
+
+}
+
+.side2 {
+  background-color: white;
+  flex: 0 0 500px;
+}
+
+.rounded {
+  height: 100%;
+  width: 100%;
+}
+
+.catagory {
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+}
+
+#imageList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#imageList > li {
+  height: 300px;
+  flex-grow: 1;
+  list-style: none;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+#text1{
+  margin: 10px;
+}
+

@@ -1,0 +1,62 @@
+<h1>Lists of all offers:</h1>
+<table id="someTable">
+  <thead>
+  <th>Title</th>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let Offer of offers" [ngClass]="{'selectedOffer': Offer == selectedOffer}">
+    <td (click)="onClickOffer(Offer)">{{Offer.title}}</td>
+  </tr>
+  </tbody>
+  <div class="btn btn-success" (click)="addNewOffer()">Add</div>
+</table>
+
+<app-detail2 (exampleOutput)="deleteOffer($event)" [selectedOffer]="selectedOffer">
+
+</app-detail2>
+
+
+
+
+
+<!--<div class="  container">-->
+
+<!--  <h1>Overview of all offers</h1>-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-3">-->
+<!--      <table>-->
+<!--        <tr>-->
+<!--          <th style="background-color: sandybrown">Offer title</th>-->
+<!--        </tr>-->
+
+<!--        <tr *ngFor="let offers of offersArray">-->
+<!--          <td (click)="this.onselect(offers)">{{offers.title}}</td>-->
+<!--        </tr>-->
+<!--      </table>-->
+<!--    </div>-->
+<!--    <div *ngIf="isAofferSelected()" class="col-5 kolom">-->
+<!--      <h3>Selected offer details: (id: {{this.selectedOffer.id}}</h3>-->
+<!--      <div class="row">-->
+<!--        <p>title</p>-->
+<!--        <input id="titleField" [(ngModel)]="selectedOffer.title" type="text">-->
+<!--      </div>-->
+
+<!--      <div class="row">-->
+<!--        <p>Description</p>-->
+<!--        <input id="descriptionField" [(ngModel)]="selectedOffer.id" type="text">-->
+<!--      </div>  <div class="row">-->
+
+<!--      <p>Status</p>-->
+<!--      <input id="StatusField" [(ngModel)]="selectedOffer.status" type="text">-->
+<!--    </div>  <div class="row">-->
+
+<!--      <p>Highest bid</p>-->
+<!--      <input  id="bidField" [(ngModel)]="this.selectedOffer.valueHighestBid" type="text">-->
+<!--    </div>-->
+<!--      <div (click)="deleteOffer(this.selectedOffer.id)" class="btn btn-success">Delete</div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--  <div (click)="createFakeOffers()" class="btn btn-success">add fake offer</div>-->
+<!--</div>-->

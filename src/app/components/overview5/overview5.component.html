@@ -1,0 +1,25 @@
+<div class="  container">
+
+  <h1>Overview of all offers</h1>
+  <div class="row">
+    <div class="col-sm-3">
+      <table>
+        <tr>
+          <th style="background-color: sandybrown">Offer title</th>
+        </tr>
+
+        <tr *ngFor="let offers of this.offerhttp.offersArray;">
+          <td (click)="this.offerhttp.onselect(offers); this.offerhttp.isSelected()">{{offers.title}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div  *ngIf="this.offerhttp.hasBeenSelected" class="col-5 kolom">
+      <app-detail5></app-detail5>
+
+    </div>
+  </div>
+
+  <div (click)="offerhttp.createFakeOffers()" class="btn btn-success">add fake offer</div>
+
+</div>

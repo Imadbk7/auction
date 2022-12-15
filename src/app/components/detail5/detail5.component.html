@@ -1,0 +1,30 @@
+<h3 id="selectedId">Selected offer details: (id: {{this.httpservice.selectedOffer.id}})</h3>
+<div class="row">
+  <p>title</p>
+  <input [ngModel]="this.httpservice.selectedOffer.title"  id="titleField" type="text">
+</div>
+
+<div class="row">
+  <p>Description</p>
+  <input [ngModel]="this.httpservice.selectedOffer.description" id="descriptionField"  type="text">
+
+</div>  <div class="row">
+  <p>Status</p>
+  <input [ngModel]="this.httpservice.selectedOffer.status" id="StatusField"  type="text">
+
+</div>  <div class="row">
+  <p>Highest bid</p>
+    <input [ngModel]="this.httpservice.selectedOffer.valueHighestBid" id="bidField"  type="text">
+</div>
+
+<div (click)="deleteOne(this.httpservice.selectedOffer.id)"  class="btn btn-success">Delete</div>
+<div (click)="clear()" class="btn btn-success">clear</div>
+<div  (click)="reset()" class="btn btn-success">reset</div>
+<div (click)="cancel()" class="btn btn-success">cancel</div>
+<div  (click)="edit()" class="btn btn-success">save</div>
+
+
+
+
+
+
